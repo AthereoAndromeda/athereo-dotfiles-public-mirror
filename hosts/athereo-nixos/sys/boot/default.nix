@@ -1,4 +1,8 @@
 {...}: {
+  imports = [
+    ./greetd
+  ];
+
   # Bootloader
   # boot.loader.systemd-boot.enable = true;
   boot.loader.grub = {
