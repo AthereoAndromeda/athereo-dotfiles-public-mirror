@@ -11,6 +11,9 @@
     # Only used to Generate GTK themes. Base16 is used for theming.
     nix-colors.url = "github:misterio77/nix-colors";
 
+    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+
     hyprland = {
       type = "git";
       url = "https://github.com/hyprwm/Hyprland";
@@ -47,6 +50,7 @@
     base16,
     nix-colors,
     zjstatus,
+    sops-nix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -88,6 +92,7 @@
 
         modules = [
           base16.nixosModule
+          sops-nix.nixosModules.sops
           {
             inherit scheme;
 
@@ -98,12 +103,28 @@
             };
 
             nixpkgs.overlays = overlays;
+
+            sops.defaultSopsFile = ./secrets/example.yaml;
+            # This will automatically import SSH keys as age keys
+            sops.age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
+            # This is using an age key that is expected to already be in the filesystem
+            sops.age.keyFile = "/var/lib/sops-nix/key.txt";
+            # This will generate a new key if the key specified above does not exist
+            sops.age.generateKey = false;
+            # This is the actual specification of the secrets.
+            sops.secrets.howdy = {};
+            sops.secrets."myservice/my_subdir/my_secret" = {};
           }
 
           # Import Home manager module
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager = {
+              # NixOS system-wide home-manager configuration
+              sharedModules = [
+                inputs.sops-nix.homeManagerModules.sops
+              ];
+
               # Use the system-level nixpkgs instead of Home Manager's
               useGlobalPkgs = true;
 
