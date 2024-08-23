@@ -110,6 +110,7 @@
   #  /etc/profiles/per-user/athereo/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
+    NOTHING = builtins.readFile config.sops.secrets.howdy.path;
   };
 
   # Set some perms for virt-manager

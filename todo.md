@@ -5,6 +5,10 @@ a handy list since i keep forgetting
 - [x] home-manager: Convert to NixOS Module
 - [x] build: Add optional extended message for git push
 
+## SOPS
+- [ ] Create a `public` branch that gitignores secrets
+- [ ] Learn how to get keys from private repos
+
 ## Hypr
 - [ ] plugins: Install `hyprexpo` or `hyprspace` when it finally works in NixOS
 - [x] hypridle: integrate with hyprlock
