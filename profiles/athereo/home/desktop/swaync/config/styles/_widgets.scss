@@ -6,20 +6,20 @@
 .widget-mpris-player {
   padding: 20px;
   margin: 8px;
-  color: @foreground;
+  /* color: @foreground; */
   padding-bottom: 0;
   margin-bottom: 0;
 }
 .widget-mpris-title {
   font-weight: bold;
   font-size: 1.25rem;
-  color: @foreground;
+  /* color: @foreground; */
   letter-spacing: 2px;
   font: bold 1em Megrim;
 }
 .widget-mpris-subtitle {
   font-size: 1;
-  color: @foreground;
+  /* color: @foreground; */
 }
 
 
@@ -30,10 +30,10 @@
 }
 .widget-inhibitors > button {
   font-size: initial;
-  color: @foreground;
+  /* color: @foreground; */
   text-shadow: none;
-  background: @background;
-  border: 1px solid @color6;
+  /* background: @background; */
+  /* border: 1px solid @color6; */
   box-shadow: none;
   border-radius: 12px;
 }

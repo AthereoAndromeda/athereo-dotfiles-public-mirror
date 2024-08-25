@@ -1,0 +1,23 @@
+@use "notifications";
+@use "widgets";
+
+$background: #000000;
+
+.control-center {
+  /* background: alpha(@background, 0.9); */
+  background: rgba($background, 0.9);
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.control-center-list-placeholder {
+  opacity: 0.1;
+}
+
+/* Window behind control center and on all other monitors */
+.blank-window {
+  /* background: alpha(@background, 0.25); */
+  background: rgba($background, 0.25);
+}
