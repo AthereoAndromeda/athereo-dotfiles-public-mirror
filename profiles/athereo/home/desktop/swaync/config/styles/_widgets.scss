@@ -27,16 +27,22 @@
 .widget-inhibitors {
   margin: 8px;
   font-size: 1.5rem;
+  background: transparent;
 }
+
 .widget-inhibitors > button {
   font-size: initial;
   /* color: @foreground; */
   text-shadow: none;
   /* background: @background; */
+  background: violet;
   /* border: 1px solid @color6; */
+  border: 1px solid white;
   box-shadow: none;
   border-radius: 12px;
 }
+
 .widget-inhibitors > button:hover {
   /* background: @noti-bg-hover; */
+  background: red;
 }

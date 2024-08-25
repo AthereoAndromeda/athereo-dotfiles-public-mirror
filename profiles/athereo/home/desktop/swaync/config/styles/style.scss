@@ -1,7 +1,6 @@
 @use "notifications";
 @use "widgets";
-
-$background: #000000;
+@use "base16" as *;
 
 .control-center {
   /* background: alpha(@background, 0.9); */

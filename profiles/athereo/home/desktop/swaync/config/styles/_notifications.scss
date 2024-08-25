@@ -22,6 +22,7 @@
   &:focus,
   &:hover {
     /* background: alpha(@color6, .2); */
+    background: rgba(yellow, .2);
   }
 }
 
@@ -38,7 +39,7 @@
 .low {
   // border: 1px solid @color3;
   
-  border: 1px solid red;
+  border: 1px solid white;
   background-image: linear-gradient(45deg, #E056FD, rgba(0, 0, 0, 0));
 }
 
@@ -52,6 +53,7 @@
 
 .critical {
   /* background: alpha(#000000, .8); */
+  background-color: #e056fd;
   background-image: linear-gradient(45deg, #E056FD 0%, #8B0000 74%);
   border: 3px solid #8B0000;
   color: #000000;
