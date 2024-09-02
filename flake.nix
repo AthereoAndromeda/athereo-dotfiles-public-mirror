@@ -104,17 +104,18 @@
 
             nixpkgs.overlays = overlays;
 
-            sops.defaultSopsFile = ./secrets/example.yaml;
+            sops.defaultSopsFile = ./secrets/default.yaml;
             # This will automatically import SSH keys as age keys
             sops.age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
             # This is using an age key that is expected to already be in the filesystem
             sops.age.keyFile = "/home/athereo/.config/sops/age/keys.txt";
             # This will generate a new key if the key specified above does not exist
             sops.age.generateKey = false;
+
             # This is the actual specification of the secrets.
-            sops.secrets.howdy = {};
-            sops.secrets."myservice/my_subdir/my_secret" = {};
-            sops.secrets.example_key = {};
+            # sops.secrets.howdy = {};
+            # sops.secrets."myservice/my_subdir/my_secret" = {};
+            # sops.secrets.example_key = {};
           }
 
           # Import Home manager module

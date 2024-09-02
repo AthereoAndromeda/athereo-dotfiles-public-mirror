@@ -98,6 +98,22 @@
     };
   };
 
+  sops = {
+    age.keyFile = "/home/athereo/.config/sops/age/keys.txt"; # must have no password!
+    # It's also possible to use a ssh key, but only when it has no password:
+    age.sshKeyPaths = ["/home/athereo/.config/sops/ssh_host_ed25519_key"];
+    defaultSopsFile = ../../secrets/default.yaml;
+    # secrets.howdy = {
+    #   # sopsFile = ./secrets.yml.enc; # optionally define per-secret files
+
+    #   # %r gets replaced with a runtime directory, use %% to specify a '%'
+    #   # sign. Runtime dir is $XDG_RUNTIME_DIR on linux and $(getconf
+    #   # DARWIN_USER_TEMP_DIR) on darwin.
+    #   path = "%r/test.txt";
+    # };
+    secrets."ngrok/authkey" = {};
+  };
+
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home
   # Manager then you have to manually source 'hm-session-vars.sh' located at
@@ -110,7 +126,6 @@
   #  /etc/profiles/per-user/athereo/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    NOTHING = builtins.readFile config.sops.secrets.howdy.path;
   };
 
   # Set some perms for virt-manager
