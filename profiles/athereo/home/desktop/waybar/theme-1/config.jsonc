@@ -7,11 +7,21 @@
 	  "memory",
 	  // "custom/media",
 	  "tray",
-	  "custom/fullscreen-checker",
-	  "custom/screenrecord"
+	  "custom/fullscreen-checker"
+	  // "custom/screenrecord"
 	],
 	"modules-center": ["mpris"],
-	"modules-right": [/*"cava",*/ "custom/hypridle", "custom/wallpaper", "backlight","network" , "wireplumber","clock", "battery","custom/power"],
+	"modules-right": [
+	  /*"cava",*/
+	  "custom/hypridle",
+    "custom/wallpaper",
+    "backlight",
+    "network",
+    "wireplumber",
+    "clock",
+    "battery",
+    "custom/power"
+	 ],
 
   "hyprland/workspaces": {
     "format": "<sub>{icon}</sub> {windows}",
@@ -170,12 +180,12 @@
       // "interval": "1s"
       "restart-interval":"30s",
     },
-    "custom/screenrecord": {
-      "format": " {}",
-      "exec-on-event": true,
-      "on-click": "~/.config/waybar/theme-1/scripts/screenrecord.sh",
-      "hide-empty-text": false,
-    },
+    // "custom/screenrecord": {
+    //   "format": " {}",
+    //   "exec-on-event": true,
+    //   "on-click": "~/.config/waybar/theme-1/scripts/screenrecord.sh",
+    //   "hide-empty-text": false,
+    // },
   
     "custom/wallpaper":{
         "format":" ",
