@@ -36,7 +36,9 @@ in {
   ];
 
   xdg.configFile = {
-    "swaync/config.json".source = ./config/config.json;
-    "swaync/dist".source = "${build-scss ./config/styles}/dist";
+    # "swaync/config.json".source = ./config/config.json;
+    # "swaync/dist".source = "${build-scss ./config/styles}/dist";
+    "swaync/config.json".source = ./config-plain/config.json;
+    "swaync/style.css".source = ./config-plain/style.css;
   };
 }
