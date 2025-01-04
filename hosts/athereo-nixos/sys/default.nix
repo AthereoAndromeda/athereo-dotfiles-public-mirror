@@ -2,9 +2,9 @@
   imports = [
     ./avahi.nix
     ./bluetooth.nix
-    ./utils
     ./opengl.nix
     ./playerctl.nix
+    ./steam.nix
     ./virt.nix
     ./X11.nix
     ./zerotier.nix
@@ -15,6 +15,7 @@
     ./hypr
     ./lang
     ./networking
+    ./utils
     ./wallpaper-engines
     ./xremap
   ];
