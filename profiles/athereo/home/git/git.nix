@@ -10,7 +10,8 @@
       st = "status";
       sw = "switch";
       logl = "log --oneline --graph --color --all --decorate";
-      b = "branch";
+      br = "branch";
+      ch = "checkout";
     };
 
     extraConfig = {

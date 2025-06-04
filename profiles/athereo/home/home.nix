@@ -39,8 +39,8 @@
     '')
 
     socat
-    obsidian
-    spotube
+    # obsidian
+    # spotube
     serie
   ];
 

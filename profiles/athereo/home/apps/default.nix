@@ -1,17 +1,17 @@
 {pkgs, ...}: {
   imports = [
-    ./bottles.nix
-    ./homebank.nix
+    # ./bottles.nix
+    # ./homebank.nix
 
-    ./browsers
+    # ./browsers
     # ./code-editors # Temporarily disable visual code editors. Create options for them instead
-    ./devices
-    ./documents
+    # ./devices
+    # ./documents
     ./file-explorers
-    ./file-sharing
-    ./instant-messaging
+    # ./file-sharing
+    # ./instant-messaging
     ./media
-    ./misc
+    # ./misc
   ];
 
   # Uncategorized for now
